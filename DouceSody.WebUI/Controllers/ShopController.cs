@@ -44,19 +44,19 @@ namespace DouceSody.WebUI.Controllers
 
         public ActionResult AddProduct()
         {
-            return View("AddProduct");
+            return View(nameof(AddProduct));
         }
 
         public ActionResult ChartProduct()
         {
-            return View("ChartProduct", shop);
+            return View(nameof(ChartProduct), shop);
         }
 
         [HttpPost]
         public ActionResult RemoveProductFromChart(string productName)
         {
             shop.RemoveProductFromChart(productName);
-            return View("ChartProduct", shop);
+            return View(nameof(ChartProduct), shop);
         }
 
         [HttpPost]
@@ -64,14 +64,14 @@ namespace DouceSody.WebUI.Controllers
         {            
             int.TryParse(quantityPurchased, out int quantity);
             shop.AddChart(productName, quantity);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]
         public ActionResult AddProduct(ProductViewModel product)
         {
             shop.AddProduct(new Product(product.Name, product.Price, product.Quantity, product.Image, product.Currency));
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }
