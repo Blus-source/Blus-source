@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "DouceSody.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DouceSody.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouceSody.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DouceSody.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DouceSody.Domain/DouceSody.Domain.csproj",
+      "msbuildProject": "../DouceSody.Domain/DouceSody.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "DouceSody.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/blus/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/blus/Projects/DouceSody/DouceSody.WebUI/DouceSody.WebUI.csproj",
+      "projectName": "DouceSody.WebUI",
+      "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.WebUI/DouceSody.WebUI.csproj",
+      "packagesPath": "/Users/blus/.nuget/packages/",
+      "outputPath": "/Users/blus/Projects/DouceSody/DouceSody.WebUI/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/blus/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/Users/blus/Projects/DouceSody/DouceSody.Domain/DouceSody.Domain.csproj": {
+              "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Domain/DouceSody.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

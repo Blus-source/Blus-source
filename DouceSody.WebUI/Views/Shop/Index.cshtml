@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DouceSody.WebUI.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Shop Page";
+}
+
+<button type="button"
+        id="AddButton"
+        class="btn btn-primary"
+        onclick="location.href='@Url.Action("AddProduct", "Shop")'">
+    Add Product
+
+</button>
+<button type="button" class="btn btn-danger">Remove Product</button>
+
+
+
+<div style="display: flex; justify-content:flex-end">
+    <button type="button"
+            id="BasketButton"
+            class="btn btn-primary"
+            onclick="location.href='@Url.Action("ChartProduct", "Shop")'">
+
+        Basket
+
+    </button>
+</div>
+
+<p>Exceptionnal products just for you....</p>
+
+<div class="card-group">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            
+        <div class="card border-primary mb-3" style="max-width: 15rem;margin:0.1rem">
+            @using (Html.BeginForm("AddToChartProduct", "Shop", FormMethod.Post))
+            {
+                <div class="card-header">
+                    <input type="text" id="productName" name="productName" value="@product.Name" readonly>
+                </div>
+                <div class="card-body">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <p class="card-text">@product.Price @product.Currency</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+
+                        <div class="pass-quantity col-lg-6 col-md-6 col-sm-6">
+                            <label for="QuantityPurchased" class="pass-quantity">Quantity</label>
+                            <input class="form-control" type="number" id="quantityPurchased" name="quantityPurchased" min="0">
+                        </div>
+                        <button type="submit"
+                                id="BasketButton"
+                                class="btn btn-dark"
+                                style="margin:0.1rem">
+
+                            Add To Chart
+
+                        </button>
+                    </div>
+                </div>
+            }
+
+        </div>
+        }
+    </div>
+</div>

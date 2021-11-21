@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DouceSody.WebUI/1.0.0": {
+        "dependencies": {
+          "DouceSody.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DouceSody.WebUI.dll": {}
+        }
+      },
+      "DouceSody.Domain/1.0.0": {
+        "runtime": {
+          "DouceSody.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DouceSody.WebUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DouceSody.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
