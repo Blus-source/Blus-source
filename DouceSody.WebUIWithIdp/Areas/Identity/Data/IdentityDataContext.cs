@@ -1,10 +1,11 @@
+using DouceSody.WebUIWithIdp.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DouceSody.WebUIWithIdp.Areas.Identity.Data;
 
-public class IdentityDataContext : IdentityDbContext<IdentityUser>
+public class IdentityDataContext : IdentityDbContext<ApplicationUser>
 {
     public IdentityDataContext(DbContextOptions<IdentityDataContext> options)
         : base(options)
