@@ -7,7 +7,9 @@ namespace DouceSody.WebUIWithIdp.Areas.Identity.Data
     {
         public DateTime BirthDay { get; set; }
 
-        public string? FullName { get; set; }
+        public string? FirstName { get; set; }
+
+        public string? LastName { get; set; }
     }
 }
 

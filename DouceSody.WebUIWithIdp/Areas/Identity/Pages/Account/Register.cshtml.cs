@@ -73,7 +73,12 @@ namespace DouceSody.WebUIWithIdp.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            public string FullName { get; set; }
+            [Display(Name = "First name")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [Display(Name = "Last name")]
+            public string LastName { get; set; }
 
             [Required]
             public DateTime BirthDate { get; set; }
@@ -121,6 +126,10 @@ namespace DouceSody.WebUIWithIdp.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+
+                user.BirthDay = Input.BirthDate;
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
