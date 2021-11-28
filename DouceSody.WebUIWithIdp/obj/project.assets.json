@@ -3381,6 +3381,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "DouceSody.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DouceSody.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DouceSody.Domain.dll": {}
+        }
       }
     }
   },
@@ -10250,10 +10260,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "DouceSody.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DouceSody.Domain/DouceSody.Domain.csproj",
+      "msbuildProject": "../DouceSody.Domain/DouceSody.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DouceSody.Domain >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.0",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.0",
@@ -10281,7 +10297,7 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/blus/.nuget/NuGet/NuGet.Config"
+        "/Users/blus/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -10292,7 +10308,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/blus/Projects/DouceSody/DouceSody.Domain/DouceSody.Domain.csproj": {
+              "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Domain/DouceSody.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Identity;
 
-namespace DouceSody.WebUIWithIdp.Data
+namespace DouceSody.WebUIWithIdp.Areas.Identity.Data
 {
     public class ApplicationUser : IdentityUser
     {

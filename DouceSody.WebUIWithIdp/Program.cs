@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using DouceSody.WebUIWithIdp.Data;
 using DouceSody.WebUIWithIdp.Areas.Identity.Data;
+using DouceSody.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddSingleton<Shop>(shop => new Shop("DouceSody"));
 
 var app = builder.Build();
 

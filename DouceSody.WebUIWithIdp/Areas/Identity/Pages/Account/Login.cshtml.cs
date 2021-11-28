@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using DouceSody.WebUIWithIdp.Data;
+using DouceSody.WebUIWithIdp.Areas.Identity.Data;
 
 namespace DouceSody.WebUIWithIdp.Areas.Identity.Pages.Account
 {

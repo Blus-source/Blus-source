@@ -1,0 +1,74 @@
+﻿@model DouceSody.Domain.Shop
+
+<h2>Chart</h2>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-7">
+            <div class="border border-gainsboro p-3">
+
+                <h2 class="h6 text-uppercase mb-0">Cart Total (@Model.TotalPurchasingItems Items): <strong class="cart-total">@Model.TotalPricePurchasing</strong></h2>
+            </div>
+
+            <div class="row">
+                @foreach (var product in Model.Basket)
+                {
+                <div class="border border-gainsboro p-3 mt-3 clearfix item">
+                    @using (Html.BeginForm("RemoveProductFromChart", "Shop", FormMethod.Post))
+                    {
+                        <div class="text-lg-left">
+                            <i class="fa fa-ticket fa-2x text-center" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-lg-5 col-5 text-lg-left">
+                            <h3 class="h6 mb-0">
+                                <input type="text" id="productName" name="productName" value="@product.ProductName" readonly><br>
+                                <small>Unit Cost : @product.Price @product.Currency</small>
+                            </h3>
+                        </div>
+
+                        <div class="col-lg-2 col-md-1 col-sm-2 product-line-price pt-4">
+                            Quantity :
+                            <span class="product-line-price">
+                                @product.Quantity
+                            </span>
+                        </div>
+                        <div class="remove-item pt-4">
+                            <button type ="submit"
+                                    class="remove-product btn-light">
+                                Delete
+                            </button>
+                        </div>
+                        }
+                    </div>
+                    }
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-5 totals">
+            <div class="border border-gainsboro px-3">
+                <div class="border-bottom border-gainsboro">
+                    <p class="text-uppercase mb-0 py-3"><strong>Order Summary</strong></p>
+                </div>
+                <div class="totals-item d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-uppercase">Subtotal</p>
+                    <p class="totals-value" id="cart-subtotal">@Model.TotalPricePurchasing</p>
+                </div>
+                <div class="totals-item d-flex align-items-center justify-content-between">
+                    <p class="text-uppercase">Estimated Tax</p>
+                    <p class="totals-value" id="cart-tax">0</p>
+                </div>
+                <div class="totals-item totals-item-total d-flex align-items-center justify-content-between mt-3 pt-3 border-top border-gainsboro">
+                    <p class="text-uppercase"><strong>Total</strong></p>
+                    <p class="totals-value font-weight-bold cart-total">@Model.TotalPricePurchasing</p>
+                </div>
+            </div>
+            <a href="#" class="mt-3 btn btn-pay w-100 d-flex justify-content-between btn-lg rounded-0">Pay Now <span class="totals-value cart-total">
+                @Model.TotalPricePurchasing</span></a>
+        </div>
+
+    </div>
+</div><!-- container -->
