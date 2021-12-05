@@ -293,3 +293,4 @@
 /Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/obj/Debug/net6.0/ref/DouceSody.WebUIWithIdp.dll
 /Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/obj/Debug/net6.0/DouceSody.WebUIWithIdp.pdb
 /Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/obj/Debug/net6.0/DouceSody.WebUIWithIdp.genruntimeconfig.cache
+/Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/bin/Debug/net6.0/AutoMapper.dll

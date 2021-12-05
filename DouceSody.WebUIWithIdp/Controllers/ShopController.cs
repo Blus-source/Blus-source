@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using DouceSody.Domain;
 using DouceSody.WebUIWithIdp.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -12,35 +13,20 @@ namespace DouceSody.WebUI.Controllers
 {
     public class ShopController : Controller
     {
+        private readonly IMapper mapper;
         private readonly Shop shop;
 
-        public ShopController(Shop shop)
+        public ShopController(IMapper mapper,Shop shop)
         {
+            this.mapper = mapper;
             this.shop = shop;
         }
 
         public IActionResult Index()
         {
-            var products = shop.Products;
-
-            var productConverted = new List<ProductViewModel>();
-
-
-            foreach (var product in products)
-            {
-                productConverted.Add(new ProductViewModel
-                {
-                    Currency = product.Currency,
-                    Image = product.Image,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Quantity = product.Quantity
-
-                });
-            }
-
-            return View(productConverted);
-        }
+            var products = mapper.Map<IEnumerable<ProductViewModel>>(shop.Products);
+            return View(products);
+         }
 
         public ActionResult AddProduct()
         {
@@ -61,16 +47,17 @@ namespace DouceSody.WebUI.Controllers
 
         [HttpPost]
         public ActionResult AddToChartProduct(string productName, string quantityPurchased)
-        {            
+        {
             int.TryParse(quantityPurchased, out int quantity);
             shop.AddChart(productName, quantity);
             return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]
-        public ActionResult AddProduct(ProductViewModel product)
+        public ActionResult AddProduct(ProductViewModel productViewModel)
         {
-            shop.AddProduct(new Product(product.Name, product.Price, product.Quantity, product.Image, product.Currency));
+            var product = mapper.Map<Product>(productViewModel);
+            shop.AddProduct(product);
             return RedirectToAction(nameof(Index));
         }
     }

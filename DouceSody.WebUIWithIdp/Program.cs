@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using DouceSody.WebUIWithIdp.Data;
 using DouceSody.WebUIWithIdp.Areas.Identity.Data;
 using DouceSody.Domain;
+using AutoMapper;
+using System.Reflection;
+using DouceSody.WebUIWithIdp.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +27,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<Shop>(shop => new Shop("Douce Sody"));
+var configuration = new MapperConfiguration(cfg => cfg.AddProfile<ProductProfile>());
+builder.Services.AddScoped<IMapper>(map => new Mapper(configuration));
 
 var app = builder.Build();
 
