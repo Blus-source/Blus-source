@@ -1,3 +1,27 @@
-﻿@model DouceSody.WebUIWithIdp.Models.AddressViewModel
+﻿<h1> Select Payment Process</h1>
 
-<h1> Payment View</h1>
+<div>
+    <div>
+        Mobile money Payment
+        <hr class="a-divider-normal" />
+        <div>
+            <div>
+                @Html.ActionLink("Pay by Mtn", "PaymentMtn", "Shop")
+            </div>
+            <div>
+                @Html.ActionLink("Pay by Orange", "PaymentOrange", "Shop")
+            </div>
+        </div>
+    </div>
+    <hr class="a-divider-normal" />
+    <div>
+        Other Payment
+        <hr class="a-divider-normal" />
+        <div>
+            <div>
+                @Html.ActionLink("Pay by Paypal", "PaymentPaypal", "Shop")
+            </div>
+        </div>
+    </div>
+    <hr class="a-divider-normal" />
+</div>

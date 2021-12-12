@@ -11,6 +11,7 @@
     <None Remove="Views\Shop\" />
     <None Remove="AutoMapper" />
     <None Remove="Profiles\" />
+    <None Remove="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -37,6 +38,7 @@
   <ItemGroup>
     <Folder Include="Views\Shop\" />
     <Folder Include="Profiles\" />
+    <Folder Include="Views\Message\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DouceSody.Domain\DouceSody.Domain.csproj">

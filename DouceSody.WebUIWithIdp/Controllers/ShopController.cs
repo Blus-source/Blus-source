@@ -37,8 +37,14 @@ namespace DouceSody.WebUI.Controllers
 
         private IActionResult ChartPayment()
         {
-            return View();
+            return View(nameof(ChartPayment));
         }
+
+        public IActionResult PaymentPaypal()
+        {
+            return RedirectToAction("SuccessPurchase", "Message");
+        }
+
 
         [HttpPost]
         public ActionResult RemoveProductFromChart(string productName)
@@ -76,9 +82,8 @@ namespace DouceSody.WebUI.Controllers
         {
             string deliveryAddress = Request.Form["addresses"].ToString();
             shop.SetDeliveryAddress(deliveryAddress);
-            return RedirectToAction(nameof(ChartPayment));
+            return View(nameof(ChartPayment));
         }
-
     }
 }
 
