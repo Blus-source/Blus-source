@@ -27,7 +27,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<Shop>(shop => new Shop("Douce Sody"));
-var configuration = new MapperConfiguration(cfg => cfg.AddProfile<ProductProfile>());
+var configuration = new MapperConfiguration(cfg => cfg.AddMaps(Assembly.GetExecutingAssembly()));
 builder.Services.AddScoped<IMapper>(map => new Mapper(configuration));
 
 var app = builder.Build();

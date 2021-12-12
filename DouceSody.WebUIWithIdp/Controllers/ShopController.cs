@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using DouceSody.Domain;
 using DouceSody.WebUIWithIdp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,7 +13,7 @@ namespace DouceSody.WebUI.Controllers
         private readonly IMapper mapper;
         private readonly Shop shop;
 
-        public ShopController(IMapper mapper,Shop shop)
+        public ShopController(IMapper mapper, Shop shop)
         {
             this.mapper = mapper;
             this.shop = shop;
@@ -38,6 +35,11 @@ namespace DouceSody.WebUI.Controllers
             return View(nameof(ChartProduct), shop);
         }
 
+        private IActionResult ChartPayment()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult RemoveProductFromChart(string productName)
         {
@@ -48,7 +50,7 @@ namespace DouceSody.WebUI.Controllers
         [HttpPost]
         public ActionResult AddToChartProduct(string productName, string quantityPurchased)
         {
-            int.TryParse(quantityPurchased, out int quantity);
+            _ = int.TryParse(quantityPurchased, out int quantity);
             shop.AddChart(productName, quantity);
             return RedirectToAction(nameof(Index));
         }
@@ -60,6 +62,23 @@ namespace DouceSody.WebUI.Controllers
             shop.AddProduct(product);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public IActionResult ChartAddress()
+        {
+            var addresses = mapper.Map<IEnumerable<AddressViewModel>>(shop.Addresses);
+            var addressList = new SelectList(addresses, nameof(AddressViewModel.Code), nameof(AddressViewModel.Place));
+            return View(addressList);
+        }
+
+        [HttpPost]
+        public ActionResult SelectDeliveryAddress()
+        {
+            string deliveryAddress = Request.Form["addresses"].ToString();
+            shop.SetDeliveryAddress(deliveryAddress);
+            return RedirectToAction(nameof(ChartPayment));
+        }
+
     }
 }
 

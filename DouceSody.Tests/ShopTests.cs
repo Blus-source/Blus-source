@@ -266,6 +266,21 @@ namespace DouceSody.Tests
             // Assert
             shop.Basket.Should().BeEmpty();
         }
+
+        [Test]
+        public void SelectDeliveryAdressFromAdresses()
+        {
+            // Arrange
+            var shop = new Shop("Test");
+            var selectedAdress = "Address2";
+
+            // Act
+            shop.SetDeliveryAddress(selectedAdress);
+
+            // Assert
+            shop.Addresses.Should().ContainSingle(address => address.Code == selectedAdress);
+            shop.DeliveryAddres.Code.Should().Be(selectedAdress);
+        }
     }
 }
 

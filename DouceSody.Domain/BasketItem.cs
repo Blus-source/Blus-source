@@ -1,13 +1,12 @@
 ﻿using System;
 namespace DouceSody.Domain
 {
-    public class BasketItem
+    public class BasketItem : ValueObject<BasketItem>
     {
         public BasketItem(string productName, decimal purchaseQuantity, string currency, decimal price)
         {
             ProductName = productName;
             Quantity = purchaseQuantity;
-            Currency = currency;
             Currency = currency;
             Price = price;
         }
@@ -22,6 +21,16 @@ namespace DouceSody.Domain
             Quantity += quantity;
         }
 
+        public override bool Equals(object? obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public void RemoveQuantity(int removeQuantity)
         {
             Quantity -= removeQuantity;
@@ -30,6 +39,24 @@ namespace DouceSody.Domain
             {
                 Quantity = 0;
             }
+        }
+
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
+
+        protected override bool EqualsCore(BasketItem other)
+        {
+            return (other.Price == Price &&
+                other.ProductName == ProductName &&
+                other.Quantity == Quantity &&
+                other.Currency == Currency);
+        }
+
+        protected override int GetHashCodeCore()
+        {
+            return ((int)(Price * Convert.ToDecimal(ProductName) * Quantity * Convert.ToDecimal(Currency)));
         }
     }
 }

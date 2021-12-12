@@ -4,6 +4,10 @@
     {
         public string Name { get; set; }
 
+        public Address DeliveryAddres { get; private set; }
+
+        public IList<Address> Addresses { get; }
+
         public IList<Product> Products { get; }
 
         public IList<BasketItem> Basket { get; }
@@ -30,7 +34,11 @@
             foreach (var purchasedProduct in Basket)
             {
                 var product = Products.SingleOrDefault(p => p.Name == purchasedProduct.ProductName);
-                total += product.Price * purchasedProduct.Quantity;
+                if (product is not null)
+                {
+                    total += (product.Price * purchasedProduct.Quantity);
+
+                }
             }
 
             return total;
@@ -50,6 +58,13 @@
                 new Product("Computer for Test", 1000, 100, "", "EUR"),
                 new Product("Plastic bag for Test", 0.1M, 100, "", "EUR"),
                 new Product("Water for Test", 0.01M, 100, "", "EUR"),
+            };
+
+            Addresses = new List<Address>
+            {
+                new Address("Address1", " BP 500 Douala", "Cameroun"),
+                new Address("Address2", " BP 500 Yaounde", "Cameroun"),
+                new Address("Address3", " BP 500 Paris", "France")
             };
         }
 
@@ -88,7 +103,10 @@
             else
             {
                 var product = Products.SingleOrDefault(p => p.Name == productName);
-                Basket.Add(new BasketItem(productName, purchaseQuantity, product.Currency, product.Price));
+                if (product is not null)
+                {
+                    Basket.Add(new BasketItem(productName, purchaseQuantity, product.Currency, product.Price));
+                }
             }
         }
 
@@ -100,7 +118,15 @@
         public void RemoveProductFromChart(string name)
         {
             var product = Basket.SingleOrDefault(product => product.ProductName == name);
-            Basket.Remove(product);
+            if (product is not null)
+            {
+                Basket.Remove(product);
+            }
+        }
+
+        public void SetDeliveryAddress(string selectedAdress)
+        {
+            DeliveryAddres = Addresses.Single(address => address.Code == selectedAdress);
         }
     }
 }

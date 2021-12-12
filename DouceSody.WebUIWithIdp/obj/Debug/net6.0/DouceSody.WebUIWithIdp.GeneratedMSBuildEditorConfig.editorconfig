@@ -63,6 +63,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9BZGRQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/Views/Shop/ChartAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9DaGFydEFkZHJlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/Views/Shop/ChartPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9DaGFydFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/Views/Shop/ChartProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9DaGFydFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
