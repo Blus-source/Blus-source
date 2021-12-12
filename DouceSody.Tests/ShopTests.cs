@@ -9,7 +9,7 @@ namespace DouceSody.Tests
     public class ShopTests
     {
         [Test]
-        public void Add_Product_To_Shop()
+        public void Should_Add_Product_To_Shop_When_Product_IsValid()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -23,7 +23,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Remove_Product_To_Shop()
+        public void Should_Remove_Product_From_Shop_When_ProductsOfShop_Contains_Product_To_Remove()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -41,7 +41,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Cannot_Add_Twice_The_Same_Product()
+        public void Should_Returns_Exception_When_Product_Already_Exits_In_ProductsOfShop()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -58,7 +58,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Cannot_Remove_Unexisting_Product()
+        public void Should_Returns_Exception_When_Product_Not_Exits_In_ProductsOfShop()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -72,7 +72,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Add_Product_To_Cart()
+        public void Should_Add_Product_To_Cart_When_Product_IsSelected_Except_BasketToBeFullFill_By_SelectedProduct()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -89,7 +89,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Add_Quantity_On_Second_Product_Of_Cart()
+        public void Should_Add_Quantity_To_Correct_Product_When_Product_Already_In_Cart_Except_Quantity_Of_Product_In_Cart_ToIncrease()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -112,26 +112,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Add_Twice_The_Same_Product_To_Cart()
-        {
-            // Arrange
-            var shop = new Shop("Test");
-            var product = new Product("ProductA", 10, 10, "ImageA", "EUR");
-            var firstPurchaseQuantity = 2;
-            var secondPurchaseQuantity = 3;
-
-            // Act
-            shop.AddProduct(product);
-            shop.AddChart(product.Name, firstPurchaseQuantity);
-            shop.AddChart(product.Name, secondPurchaseQuantity);
-
-            // Assert
-            shop.Basket.Should().ContainSingle(p => p.ProductName == product.Name
-            && p.Quantity == 5);
-        }
-
-        [Test]
-        public void Clear_Products_From_Cart()
+        public void Should_Return_Empty_Basket_When_Cart_Contains_Products_And_ClearMethod_Is_Called_Except_BasketToBeEmpty()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -148,7 +129,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Total_Items_Of_Chart_Is_Two()
+        public void Should_Return_Products_Numbers_In_Cart_When_Cart_Contains_Products_Except_Two()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -168,7 +149,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void Total_Of_Chart_Should_Be_Correct()
+        public void Should_Return_Total_Products_Quantity_In_Cart_When_Cart_Contains_Products_Except_Fifty()
         {
             // Arrange
             var shop = new Shop("Test");
@@ -268,7 +249,7 @@ namespace DouceSody.Tests
         }
 
         [Test]
-        public void SelectDeliveryAdressFromAdresses()
+        public void Should_Set_Delivery_Address_To_Shop_When_Product_IsValid_Except_DeliveryAddressToBeFullFill()
         {
             // Arrange
             var shop = new Shop("Test");
