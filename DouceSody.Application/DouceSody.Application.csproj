@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Shop\" />
+    <None Remove="Common\Mappings\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Common\Models\" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="MediatR" />
+    <None Remove="FluentValidation" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Addresses\" />
+    <None Remove="Shop\Commands\" />
+    <None Remove="Shop\Queries\" />
+    <None Remove="Addresses\Commands\" />
+    <None Remove="Addresses\Queries\" />
+    <None Remove="Common\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Shop\" />
+    <Folder Include="Common\Mappings\" />
+    <Folder Include="Common\Models\" />
+    <Folder Include="Addresses\" />
+    <Folder Include="Shop\Commands\" />
+    <Folder Include="Shop\Queries\" />
+    <Folder Include="Addresses\Commands\" />
+    <Folder Include="Addresses\Queries\" />
+    <Folder Include="Common\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DouceSody.Domain\DouceSody.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+  </ItemGroup>
+</Project>

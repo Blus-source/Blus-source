@@ -3,13 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using DouceSody.WebUIWithIdp.Data;
 using DouceSody.WebUIWithIdp.Areas.Identity.Data;
 using DouceSody.Domain;
-using AutoMapper;
 using System.Reflection;
-using DouceSody.WebUIWithIdp.Profiles;
+using DouceSody.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddApplication();
+
+builder.Services.AddHttpContextAccessor();
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<IdentityDataContext>(options =>
     options.UseSqlServer(connectionString));
@@ -25,10 +28,6 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
-builder.Services.AddSingleton<Shop>(shop => new Shop("Douce Sody"));
-var configuration = new MapperConfiguration(cfg => cfg.AddMaps(Assembly.GetExecutingAssembly()));
-builder.Services.AddScoped<IMapper>(map => new Mapper(configuration));
 
 var app = builder.Build();
 

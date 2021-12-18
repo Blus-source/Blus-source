@@ -1,0 +1,15 @@
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/DouceSody.Application.deps.json
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/DouceSody.Application.dll
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/ref/DouceSody.Application.dll
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/DouceSody.Application.pdb
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/DouceSody.Domain.dll
+/Users/blus/Projects/DouceSody/DouceSody.Application/bin/Debug/net6.0/DouceSody.Domain.pdb
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.csproj.AssemblyReference.cache
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.AssemblyInfoInputs.cache
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.AssemblyInfo.cs
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.csproj.CoreCompileInputs.cache
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.csproj.CopyComplete
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.dll
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/ref/DouceSody.Application.dll
+/Users/blus/Projects/DouceSody/DouceSody.Application/obj/Debug/net6.0/DouceSody.Application.pdb
