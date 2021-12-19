@@ -136,6 +136,91 @@
         }
       }
     },
+    "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/DouceSody.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/DouceSody.Infrastructure.csproj",
+        "projectName": "DouceSody.Infrastructure",
+        "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/DouceSody.Infrastructure.csproj",
+        "packagesPath": "/Users/blus/.nuget/packages/",
+        "outputPath": "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/blus/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/blus/Projects/DouceSody/DouceSody.Application/DouceSody.Application.csproj": {
+                "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Application/DouceSody.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/blus/Projects/DouceSody/DouceSody.WebUIWithIdp/DouceSody.WebUIWithIdp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -163,6 +248,9 @@
             "projectReferences": {
               "/Users/blus/Projects/DouceSody/DouceSody.Application/DouceSody.Application.csproj": {
                 "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Application/DouceSody.Application.csproj"
+              },
+              "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/DouceSody.Infrastructure.csproj": {
+                "projectPath": "/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/DouceSody.Infrastructure.csproj"
               }
             }
           }
@@ -210,6 +298,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.1, )"
             },

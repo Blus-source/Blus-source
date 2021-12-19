@@ -1,0 +1,16 @@
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Infrastructure.deps.json
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Infrastructure.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/ref/DouceSody.Infrastructure.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Infrastructure.pdb
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Application.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Domain.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Application.pdb
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/bin/Debug/net6.0/DouceSody.Domain.pdb
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.AssemblyInfoInputs.cache
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.AssemblyInfo.cs
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.csproj.CopyComplete
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/ref/DouceSody.Infrastructure.dll
+/Users/blus/Projects/DouceSody/DouceSody.Infrastructure/obj/Debug/net6.0/DouceSody.Infrastructure.pdb

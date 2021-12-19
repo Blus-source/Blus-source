@@ -25,6 +25,9 @@
     <None Remove="Addresses\Commands\" />
     <None Remove="Addresses\Queries\" />
     <None Remove="Common\Interfaces\" />
+    <None Remove="Common\Behaviours\" />
+    <None Remove="Common\Exceptions\" />
+    <None Remove="Security\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -37,6 +40,9 @@
     <Folder Include="Addresses\Commands\" />
     <Folder Include="Addresses\Queries\" />
     <Folder Include="Common\Interfaces\" />
+    <Folder Include="Common\Behaviours\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DouceSody.Domain\DouceSody.Domain.csproj" />
